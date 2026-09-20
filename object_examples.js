@@ -1,0 +1,36 @@
+//Object Literal
+let person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    null: null,
+    undefined: undefined,
+    "full name": "John Doe",
+
+    displayInfo: function() {
+        console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}`);
+    }
+
+    displayArrow: () => {
+        console.log(this)
+        console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}`);
+    }
+};
+console.log(person);
+person.displayInfo();
+person.displayArrow();
+
+console.log(person.name);
+console.log(person.null)
+console.log(person["full name"])
+const fnm = "full name" 
+console.log(person[fnm])
+
+const {
+    name,
+    age,
+    city: myCityName,
+    null:n
+} = person
+
+console.log(name, age, myCityName, n)
